@@ -44,11 +44,12 @@ public final class VolSphere {
             System.out.println(radiusFloat + " is negative.");
         } else {
             // Calculate volume
-            final double volume = (4d / 3d) * (Math.PI * Math.pow(radiusFloat, 3));
+            final double volumePartOne = (Math.PI * Math.pow(radiusFloat, 3));
+            final double volumeFinal = (4d / 3d) * volumePartOne;
 
             // Print result to user and round
             System.out.print("The volume of the sphere is: ");
-            System.out.format("%.3f", volume);
+            System.out.format("%.3f", volumeFinal);
             System.out.println("cm^2.");
         }
 
